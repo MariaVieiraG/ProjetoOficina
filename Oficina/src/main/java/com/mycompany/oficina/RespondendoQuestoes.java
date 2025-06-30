@@ -146,7 +146,7 @@ public class RespondendoQuestoes {
         System.out.println("Contagem final de carros: " + contadorCarro + "\n");
 
 
-        //Questao13 e 16 - Implementar a interface Comparator para as classes Agendamento e Cliente
+        //Questao13 e 16 - Implementar a ‘interface’ Comparator para as classes Agendamento e Cliente
         // e fazer comparações por diferentes atributos
         // - Apresentar no main testes do comparator implementado.
         System.out.println("--- Questão 13 e 16 ---");
@@ -212,7 +212,7 @@ public class RespondendoQuestoes {
         System.out.println();
         /*
             -find() é uma busca linear, compara nome por chave até encontrar o que precisa
-            -binarySearch() é uma busca que necessita que a lista esteja ordenada para que aconteça.
+            -binarySearch() é uma busca que necessita que a lista esteja ordenada para acontecer.
             ela vai ao meio da lista ordenada e a partir disso consegue descartar metade da lista
             na pesquisa.
          */
