@@ -1,0 +1,44 @@
+[
+  {
+    "descricao": "Compra inicial de 10x Oleo de Motor",
+    "valor": 200.0,
+    "tipo": "DESPESA_PECAS",
+    "data": "2025-06-30T09:20:30.0973439"
+  },
+  {
+    "descricao": "Receita da OS #Ordem-Serviço000 para cliente maria",
+    "valor": 465.0,
+    "tipo": "RECEITA_SERVICO",
+    "data": "2025-06-30T10:56:09.656286"
+  },
+  {
+    "descricao": "Comissão (5%) da OS #Ordem-Serviço000 para mecânico Tadeu",
+    "valor": 23.25,
+    "tipo": "DESPESA_COMISSAO",
+    "data": "2025-06-30T10:56:09.656286"
+  },
+  {
+    "descricao": "Salário de Maiza",
+    "valor": 1000.0,
+    "tipo": "DESPESA_SALARIO",
+    "data": "2025-06-30T10:57:58.7717724"
+  },
+  {
+    "descricao": "Salário de Tadeu",
+    "valor": 1500.0,
+    "tipo": "DESPESA_SALARIO",
+    "data": "2025-06-30T10:57:58.7717724"
+  },
+  {
+    "descricao": "Salário de Maiza",
+    "valor": 1000.0,
+    "tipo": "DESPESA_SALARIO",
+    "data": "2025-06-30T11:52:29.9541355"
+  },
+  {
+    "descricao": "Salário de Tadeu",
+    "valor": 1500.0,
+    "tipo": "DESPESA_SALARIO",
+    "data": "2025-06-30T11:52:29.9541355"
+  }
+]

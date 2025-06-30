@@ -1,0 +1,9 @@
+[
+  {
+    "idProduto": "PR-002",
+    "nome": "Oleo de Motor",
+    "preco": 35.0,
+    "quantidade": 10,
+    "fornecedor": "Y"
+  }
+]

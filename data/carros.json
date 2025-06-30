@@ -1,0 +1,11 @@
+[
+  {
+    "idCarro": "Carro-002",
+    "fabricante": "Fiat",
+    "modelo": "uno",
+    "placa": "abc",
+    "chassi": "abc",
+    "cpfDono": "10522526640",
+    "nomeDono": "maria"
+  }
+]

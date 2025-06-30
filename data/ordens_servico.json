@@ -1,0 +1,50 @@
+[
+  {
+    "numeroOS": "Ordem-Serviço000",
+    "cliente": {
+      "idCliente": "CL-001",
+      "nome": "maria",
+      "cpf": "10522526640",
+      "telefone": "33859685965",
+      "endereco": "n/a",
+      "email": "@gmail.com"
+    },
+    "carro": {
+      "idCarro": "Carro-002",
+      "fabricante": "Fiat",
+      "modelo": "uno",
+      "placa": "abc",
+      "chassi": "abc",
+      "cpfDono": "10522526640",
+      "nomeDono": "maria"
+    },
+    "mecanicoResponsavel": {
+      "idUsuario": "User-005",
+      "senha": "1234",
+      "cargo": "Mecanico",
+      "nome": "Tadeu",
+      "cpf": "12345678911",
+      "telefone": "12345678911",
+      "endereco": "n/a",
+      "email": "@gmail.com"
+    },
+    "defeitoRelatado": "TRoca de Oleo",
+    "dataAbertura": "2025-06-30T10:56:09.656286",
+    "servicosRealizados": [],
+    "pecasUtilizadas": [
+      {
+        "produtoOriginal": {
+          "idProduto": "PR-002",
+          "nome": "Oleo de Motor",
+          "preco": 35.0,
+          "quantidade": 1,
+          "fornecedor": "Y"
+        },
+        "quantidadeUtilizada": 9,
+        "precoNoMomentoDoUso": 35.0
+      }
+    ],
+    "observadores": [],
+    "nomeDaClasseDoEstado": "com.mycompany.oficina.ordemservico.stateOS.EstadoFinalizada"
+  }
+]

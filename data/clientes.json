@@ -1,0 +1,26 @@
+[
+  {
+    "idCliente": "CL-001",
+    "nome": "maria",
+    "cpf": "10522526640",
+    "telefone": "33859685965",
+    "endereco": "n/a",
+    "email": "@gmail.com"
+  },
+  {
+    "idCliente": "CL-004",
+    "nome": "teste",
+    "cpf": "12345678911",
+    "telefone": "12345678911",
+    "endereco": "n/a",
+    "email": "@gmail.com"
+  },
+  {
+    "idCliente": "CL-005",
+    "nome": "miguel",
+    "cpf": "12345678910",
+    "telefone": "12345678910",
+    "endereco": "12345678910",
+    "email": "@gmail.com"
+  }
+]

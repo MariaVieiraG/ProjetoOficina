@@ -1,0 +1,42 @@
+{
+  "2025-06-30": [
+    null,
+    {
+      "cliente": {
+        "idCliente": "CL-001",
+        "nome": "maria",
+        "cpf": "10522526640",
+        "telefone": "33859685965",
+        "endereco": "n/a",
+        "email": "@gmail.com"
+      },
+      "carro": {
+        "idCarro": "Carro-002",
+        "fabricante": "Fiat",
+        "modelo": "uno",
+        "placa": "abc",
+        "chassi": "abc",
+        "cpfDono": "10522526640",
+        "nomeDono": "maria"
+      },
+      "mecanico": {
+        "idUsuario": "User-005",
+        "senha": "1234",
+        "cargo": "Mecanico",
+        "nome": "Tadeu",
+        "cpf": "12345678911",
+        "telefone": "12345678911",
+        "endereco": "n/a",
+        "email": "@gmail.com"
+      },
+      "tipoServico": "ALINHAMENTO",
+      "dataHora": "2025-06-30T09:00:00"
+    },
+    null,
+    null,
+    null,
+    null,
+    null,
+    null
+  ]
+}

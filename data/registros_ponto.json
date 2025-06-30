@@ -1,0 +1,44 @@
+[
+  {
+    "funcionario": {
+      "idUsuario": "User-001",
+      "senha": "admin",
+      "cargo": "Admin",
+      "nome": "Administrador do Sistema",
+      "cpf": "00000000000",
+      "telefone": "00000000000",
+      "endereco": "N/A",
+      "email": "admin@oficina.com"
+    },
+    "dataHoraEntrada": "2025-06-30T09:20:51.2450363",
+    "dataHoraSaida": "2025-06-30T09:20:55.6115663"
+  },
+  {
+    "funcionario": {
+      "idUsuario": "User-003",
+      "senha": "1234",
+      "cargo": "Atendente",
+      "nome": "Maiza",
+      "cpf": "12345678910",
+      "telefone": "12345678910",
+      "endereco": "n/a",
+      "email": "@gmail.com"
+    },
+    "dataHoraEntrada": "2025-06-30T09:23:38.7735102",
+    "dataHoraSaida": "2025-06-30T09:23:41.3965878"
+  },
+  {
+    "funcionario": {
+      "idUsuario": "User-005",
+      "senha": "1234",
+      "cargo": "Mecanico",
+      "nome": "Tadeu",
+      "cpf": "12345678911",
+      "telefone": "12345678911",
+      "endereco": "n/a",
+      "email": "@gmail.com"
+    },
+    "dataHoraEntrada": "2025-06-30T09:24:22.5297657",
+    "dataHoraSaida": "2025-06-30T09:24:25.1105864"
+  }
+]
