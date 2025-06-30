@@ -16,6 +16,7 @@ import com.mycompany.oficina.interpreter.ContextoDeBusca;
 import com.mycompany.oficina.interpreter.Expressao;
 import com.mycompany.oficina.interpreter.ExpressaoPorCliente;
 import com.mycompany.oficina.interpreter.ExpressaoPorData;
+import com.mycompany.oficina.ordemservico.GerenciadorOrdemDeServico;
 import com.mycompany.oficina.seguranca.Sessao;
 import com.mycompany.oficina.sistemaponto.GerenciadorPonto;
 import com.mycompany.oficina.sistemaponto.RegistroPonto;
@@ -43,6 +44,7 @@ public class AtendenteController {
     private final GerenciadorPonto gerenciadorPonto;
     private final GerenciadorFinanceiro gerenciadorFinanceiro;
     private final AgendaOficina agenda;
+    private final GerenciadorOrdemDeServico gerenciadorOS;
 
     /**
      * Construtor que inicializa os gerenciadores a partir da aplicação principal.
@@ -54,6 +56,7 @@ public class AtendenteController {
         this.gerenciadorFuncionario = app.getGerenciadorFuncionario();
         this.gerenciadorPonto = app.getGerenciadorPonto();
         this.gerenciadorFinanceiro = app.getGerenciadorFinanceiro();
+        this.gerenciadorOS = app.getGerenciadorOS();
         this.agenda = app.getAgenda();
     }
 
@@ -333,5 +336,8 @@ public class AtendenteController {
         return meusRegistros.stream()
                 .filter(r -> r.getDataHoraEntrada().toLocalDate().isEqual(LocalDate.now()))
                 .collect(Collectors.toList());
+    }
+        public GerenciadorOrdemDeServico getGerenciadorOS() {
+        return gerenciadorOS;
     }
 }

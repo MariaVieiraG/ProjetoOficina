@@ -140,12 +140,6 @@ public abstract class Pessoa {
      */
     @Override
     public String toString() {
-        return "Pessoa{" +
-                "nome='" + nome + '\'' +
-                ", cpf='" + cpf + '\'' +
-                ", telefone='" + telefone + '\'' +
-                ", endereco='" + endereco + '\'' +
-                ", email='" + email + '\'' +
-                '}';
+        return this.nome;
     }
 }

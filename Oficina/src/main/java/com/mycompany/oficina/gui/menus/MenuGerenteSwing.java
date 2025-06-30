@@ -16,7 +16,7 @@ import java.awt.*;
 public class MenuGerenteSwing extends JFrame {
     public MenuGerenteSwing() {
         setTitle("Menu do Gerente");
-        setSize(350, 450);
+        setSize(450, 550);
         setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         setLocationRelativeTo(null);
 
@@ -31,6 +31,7 @@ public class MenuGerenteSwing extends JFrame {
         JButton btnFinanceiro = new JButton("Módulo Financeiro");
         JButton btnEstoque = new JButton("Módulo de Estoque");
         JButton btnPonto = new JButton("Registrar Ponto");
+        JButton btnExtratosOS = new JButton("Ver Extratos de OS");
         JButton btnSair = new JButton("Logout");
 
         formatButton(btnClientes);
@@ -40,6 +41,7 @@ public class MenuGerenteSwing extends JFrame {
         formatButton(btnFinanceiro);
         formatButton(btnEstoque);
         formatButton(btnPonto);
+        formatButton(btnExtratosOS);
         formatButton(btnSair);
 
         btnClientes.addActionListener(e -> new ClienteManagerSwing().setVisible(true));
@@ -50,8 +52,9 @@ public class MenuGerenteSwing extends JFrame {
         btnEstoque.addActionListener(e -> new ManagerEstoqueSwing().setVisible(true));
         btnPonto.addActionListener(e -> new ManagerPontoSwing(new GerenteController()).setVisible(true));
         btnSair.addActionListener(e -> dispose());
+        btnExtratosOS.addActionListener(e -> new ManagerExtratoOsSwing().setVisible(true));
 
-        panel.add(btnClientes);
+         panel.add(btnClientes);
         panel.add(Box.createRigidArea(new Dimension(0, 10)));
         panel.add(btnVeiculos);
         panel.add(Box.createRigidArea(new Dimension(0, 10)));
@@ -60,11 +63,13 @@ public class MenuGerenteSwing extends JFrame {
         panel.add(btnFuncionarios);
         panel.add(Box.createRigidArea(new Dimension(0, 10)));
         panel.add(btnEstoque);
-        panel.add(Box.createRigidArea(new Dimension(0, 10)));
+        panel.add(Box.createRigidArea(new Dimension(0, 10))); // Espaçamento
+        panel.add(btnExtratosOS);
+        panel.add(Box.createRigidArea(new Dimension(0, 10))); // Espaçamento
         panel.add(btnFinanceiro);
         panel.add(Box.createRigidArea(new Dimension(0, 10)));
         panel.add(btnPonto);
-        panel.add(Box.createRigidArea(new Dimension(0, 20)));
+        panel.add(Box.createRigidArea(new Dimension(0, 20))); // Espaçamento maior antes de Sair
         panel.add(btnSair);
 
         add(panel);

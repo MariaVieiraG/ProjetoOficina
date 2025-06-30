@@ -102,6 +102,7 @@ public class Funcionario extends Pessoa implements Entidades {
      * 
      * @return CPF do funcionário.
      */
+    
     @Override
     public String getIdentificador() {
         return this.getCpf();

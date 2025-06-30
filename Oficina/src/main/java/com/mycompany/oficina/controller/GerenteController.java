@@ -7,6 +7,7 @@ import com.mycompany.oficina.financeiro.GerenciadorFinanceiro;
 import com.mycompany.oficina.financeiro.RegistroFinanceiro;
 import com.mycompany.oficina.loja.Estoque;
 import com.mycompany.oficina.loja.Produto;
+import com.mycompany.oficina.ordemservico.*;
 import java.time.LocalDate;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -23,6 +24,7 @@ public class GerenteController extends AtendenteController {
 
     private final GerenciadorFuncionario gerenciadorFuncionario;
     private final GerenciadorFinanceiro gerenciadorFinanceiro;
+    private final GerenciadorOrdemDeServico gerenciadorOs;
     private final Estoque estoque;
 
     /**
@@ -33,6 +35,7 @@ public class GerenteController extends AtendenteController {
         OficinaAplicattion app = OficinaAplicattion.getInstance();
         this.gerenciadorFuncionario = app.getGerenciadorFuncionario();
         this.gerenciadorFinanceiro = app.getGerenciadorFinanceiro();
+        this.gerenciadorOs =app.getGerenciadorOS();
         this.estoque = app.getEstoque();
     }
 
@@ -227,5 +230,23 @@ public class GerenteController extends AtendenteController {
 
         estoque.salvarEstoque();
         return true;
+    }
+    
+    
+    /**
+     * Retorna todas as Ordens de Serviço cadastradas no sistema.
+     * @return uma lista de todas as Ordens de Serviço.
+     */
+    public List<OrdemDeServico> listarTodasOS() {
+        return gerenciadorOs.listarTodos();
+    }
+
+    /**
+     * Busca uma Ordem de Serviço pelo seu número de identificação.
+     * @param idOS o número da OS a ser buscada.
+     * @return a Ordem de Serviço encontrada, ou null se não existir.
+     */
+    public OrdemDeServico buscarOS(String idOS) {
+        return gerenciadorOs.buscarPorIdentificador(idOS);
     }
 }
