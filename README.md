@@ -1,87 +1,74 @@
-Sistema de Gerenciamento de Oficina Mecânica
+# Sistema de Gestão de Oficina – Milho Verde
 
-![Java](https://img.shields.io/badge/Java-17-blue)
-![Swing](https://img.shields.io/badge/UI-Swing-orange)
-![Maven](https://img.shields.io/badge/Build-Maven-red)
-![Database](https://img.shields.io/badge/Database-JSON-yellow)
+**Projeto acadêmico de Programação Orientada a Objetos (POO)** | Status: ✔️ Completo
 
+## 📖 Descrição
 
+[cite_start]Este sistema foi desenvolvido para gerenciar de forma eficiente todos os processos operacionais de uma oficina mecânica, como proposto no trabalho prático da disciplina[cite: 1, 66]. O software, construído com uma **interface gráfica em Java Swing**, permite automatizar e organizar tarefas rotineiras como controle de clientes, veículos, estoque, agendamentos, ordens de serviço, funcionários e finanças, integrando funcionalidades essenciais em uma solução robusta.
 
-## ✨ Funcionalidades Principais
+## ✨ Principais Funcionalidades
 
-O sistema organiza as funcionalidades de acordo com o perfil de usuário logado.
+-   **Gerenciamento de Serviços**: Controle completo das ordens de serviço com status (`Aguardando`, `Em Inspeção`, `Em Serviço`, `Finalizada`, `Cancelada`) gerenciados pelo **Padrão State**.
+-   **Agendamento Inteligente**: Cadastro, edição e controle de agendamentos em um calendário funcional, com verificação de disponibilidade e aplicação de taxas para cancelamentos no mesmo dia.
+-   **Cadastro de Clientes e Veículos**: Inclusão, edição e busca de clientes e seus respectivos veículos, com associação clara entre eles.
+-   **Gestão de Funcionários**: Cadastro, edição, autenticação, controle de ponto e permissões por cargo (`Admin`, `Atendente`, `Mecanico`).
+-   **Controle de Estoque**: Gerenciamento de produtos/peças, com registro de compras, baixa automática para serviços e atualização do estoque.
+-   **Extratos e Relatórios**: Emissão de extratos detalhados por Ordem de Serviço, relatórios diários/mensais de vendas e balanço financeiro.
+-   **Controle de Acesso**: Autenticação obrigatória de funcionário para iniciar o sistema, com acesso a funcionalidades restritas de acordo com o cargo.
+-   **Gestão de Elevadores**: O sistema gerencia 3 elevadores de forma estática, que podem ser associados aos agendamentos.
 
-### 👨‍💼 Gerente
-Acesso total ao sistema, com permissões para todas as operações, incluindo:
-- **Gestão de Pessoal:** Cadastrar, editar e remover funcionários (Atendentes, Mecânicos).
-- **Módulo Financeiro:**
-    - Emitir balanços diários e mensais (receitas vs. despesas).
-    - Gerar relatórios detalhados de despesas.
-    - Registrar o pagamento de salários dos funcionários.
-- **Controle de Estoque:**
-    - Cadastrar novas peças e registrar a despesa da compra.
-    - Realizar a reposição de itens no estoque.
-- **Visualização de Ordens de Serviço:** Acesso a todos os extratos de OS.
+## ✔️ Requisitos e Critérios Atendidos
 
-### 👩‍💻 Atendente
-Responsável pelo atendimento ao cliente e gerenciamento inicial dos serviços:
-- **Gestão de Clientes:** CRUD completo de clientes.
-- **Gestão de Veículos:** CRUD completo de veículos, sempre associados a um cliente.
-- **Agendamento de Serviços:** Criar e cancelar agendamentos para os clientes.
-- **Registro de Ponto:** Realizar o registro de entrada e saída.
+O projeto foi desenvolvido para atender a todos os requisitos obrigatórios e boas práticas da disciplina de POO:
 
-### 🔧 Mecânico
-Focado na execução e gerenciamento técnico dos serviços:
-- **Gestão de Ordens de Serviço (OS):**
-    - Iniciar uma OS a partir de um agendamento do dia.
-    - Acompanhar e alterar o status de uma OS (`Em Inspeção`, `Em Serviço`, `Finalizada`).
-    - Adicionar peças à OS, com baixa automática no estoque.
-    - Gerar o extrato detalhado ao finalizar o serviço.
-- **Registro de Ponto:** Realizar o registro de entrada e saída.
+-   **Diagramas UML**: A modelagem do sistema (Casos de Uso, Classes, Sequência, Estados) foi realizada para guiar a implementação.
+-   **Pilares da POO**: O código aplica de forma rigorosa os conceitos de Herança, Polimorfismo, Encapsulamento e Abstração.
+-   [cite_start]**Estruturas de Dados**: Utiliza tanto vetores estáticos (`Elevador`) quanto listas dinâmicas (`ArrayList` para clientes, OS, etc.)[cite: 36, 41].
+-   **Persistência de Dados**: Todas as informações são salvas e recuperadas de arquivos `.json` utilizando a biblioteca **Gson**, com tratamento seguro de recursos.
+-   [cite_start]**Interface Gráfica (Extra)**: A interface gráfica foi desenvolvida com **Java Swing**, cumprindo o requisito extra da disciplina[cite: 53].
+-   **Testes e Conceitos Avançados**: A classe `RespondendoQuestoes.java` demonstra a aplicação de `Iterator`, `Comparator`, `Collections.sort()` e `binarySearch`, conforme solicitado.
 
-## 🏛️ Arquitetura e Padrões de Projeto
+## 📂 Estrutura do Projeto
 
-O projeto foi desenvolvido com foco na organização e manutenibilidade, aplicando diversos padrões de projeto sobre a arquitetura **MVC (Model-View-Controller)**.
+O código está organizado de forma modular, separando responsabilidades para facilitar a manutenção e o entendimento.
 
-- **Singleton:** Garante uma instância única para classes centrais como `OficinaAplicattion` (orquestrador geral) e `Sessao` (controle de login).
-- **State:** Gerencia o ciclo de vida da `OrdemDeServico` (`Aguardando`, `Em Inspeção`, `Em Serviço`, `Finalizada`, `Cancelada`). Cada estado é uma classe que define as operações permitidas, tornando o código mais limpo e extensível.
-- **Observer:** Utilizado para notificar o cliente sobre mudanças no status de sua `OrdemDeServico`. A classe `NotificadorOs` observa a OS e simula o envio de uma notificação a cada mudança de estado.
-- **Strategy:** Aplicado para a validação de dados de entrada (CPF, E-mail, Telefone). Cada regra de validação é uma estratégia encapsulada em sua própria classe, o que facilita a adição de novas validações.
-- **Interpreter:** Utilizado para criar um sistema de busca flexível para agendamentos, permitindo consultas por data ou por nome de cliente.
+```
+com/mycompany/oficina/
+│
+├── application/    # Classe principal e Singleton que une o sistema
+├── controller/     # Lógica de negócio e regras da aplicação
+├── entidades/      # Classes de modelo (Cliente, Veículo, Funcionario, etc.)
+├── persistencia/   # Classes de acesso e controle dos arquivos JSON
+├── gui/            # Interface gráfica (telas e diálogos com Swing)
+├── agendamento/    # Lógica e classes relacionadas a agendamentos
+├── financeiro/     # Classes para controle de receitas e despesas
+├── ordemservico/   # Lógica e padrões (State, Observer) para Ordens de Serviço
+├── strategy/       # Padrão Strategy para validações de dados
+├── interpreter/    # Padrão Interpreter para o sistema de busca
+└── ...
+```
 
-## 🛠️ Tecnologias
+## 🚀 Como Usar
 
-- **Java 17**
-- **Java Swing**
-- **Gson 2.10.1** (para manipulação de JSON)
-- **Maven** (para gerenciamento de dependências)
-
-## 🚀 Como Executar o Projeto
-
-#### Pré-requisitos
-- JDK 17 ou superior
-- Apache Maven
-
-#### Passos
-1.  Clone o repositório:
-    ```bash
-    git clone [https://github.com/mariavieirag/projetooficina.git](https://github.com/mariavieirag/projetooficina.git)
-    ```
-2.  Navegue até a pasta do projeto:
+1.  **Pré-requisitos**: JDK 17+ e Maven.
+2.  **Clone o repositório**: `git clone https://github.com/mariavieirag/projetooficina.git`
+3.  **Execute o projeto** via sua IDE ou pelo terminal com o Maven:
     ```bash
     cd projetooficina/Oficina
-    ```
-3.  Compile e execute o projeto utilizando o Maven:
-    ```bash
     mvn clean compile exec:java
     ```
-    Alternativamente, você pode importar o projeto em sua IDE (IntelliJ, Eclipse, etc.) como um projeto Maven e executar a classe `com.mycompany.oficina.Oficina`.
+4.  **Faça o login** com o usuário administrador padrão (criado na primeira execução):
+    * **CPF:** `00000000000`
+    * **Senha:** `admin`
+5.  Navegue pelos menus para gerenciar as funcionalidades da oficina.
 
-#### Primeiro Acesso
-Ao iniciar o sistema pela primeira vez, um usuário **Admin** padrão é criado automaticamente. Utilize as seguintes credenciais:
-- **CPF:** `00000000000`
-- **Senha:** `admin`
+## 📦 Dependências
 
-## 🗃️ Persistência de Dados
+-   **Gson**: Biblioteca da Google para serialização e leitura de arquivos JSON.
+-   **Java SE 17** ou superior.
 
-O sistema utiliza arquivos **JSON** como meio de persistência de dados. Todas as informações (clientes, funcionários, ordens de serviço, etc.) são salvas em arquivos correspondentes dentro do diretório `data/`, que é criado na raiz do projeto durante a primeira execução.
+## 📝 Observações
+
+-   O projeto foi desenvolvido como uma avaliação acadêmica, focando na aplicação correta dos conceitos de POO e padrões de projeto.
+-   A persistência em JSON foi um requisito obrigatório da disciplina.
+-   O código é amplamente documentado para facilitar a compreensão e a manutenção.
