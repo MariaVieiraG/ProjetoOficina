@@ -4,7 +4,7 @@
 
 ## 📖 Descrição
 
-[cite_start]Este sistema foi desenvolvido para gerenciar de forma eficiente todos os processos operacionais de uma oficina mecânica, como proposto no trabalho prático da disciplina[cite: 1, 66]. O software, construído com uma **interface gráfica em Java Swing**, permite automatizar e organizar tarefas rotineiras como controle de clientes, veículos, estoque, agendamentos, ordens de serviço, funcionários e finanças, integrando funcionalidades essenciais em uma solução robusta.
+Este sistema foi desenvolvido para gerenciar de forma eficiente todos os processos operacionais de uma oficina mecânica, como proposto no trabalho prático da disciplina. O software, construído com uma **interface gráfica em Java Swing**, permite automatizar e organizar tarefas rotineiras como controle de clientes, veículos, estoque, agendamentos, ordens de serviço, funcionários e finanças, integrando funcionalidades essenciais em uma solução robusta.
 
 ## ✨ Principais Funcionalidades
 
