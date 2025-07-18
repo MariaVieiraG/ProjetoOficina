@@ -24,9 +24,9 @@ O projeto foi desenvolvido para atender a todos os requisitos obrigatórios e bo
 
 -   **Diagramas UML**: A modelagem do sistema (Casos de Uso, Classes, Sequência, Estados) foi realizada para guiar a implementação.
 -   **Pilares da POO**: O código aplica de forma rigorosa os conceitos de Herança, Polimorfismo, Encapsulamento e Abstração.
--   **Estruturas de Dados**: Utiliza tanto vetores estáticos (`Elevador`) quanto listas dinâmicas (`ArrayList` para clientes, OS, etc.)[cite: 36, 41].
+-   **Estruturas de Dados**: Utiliza tanto vetores estáticos (`Elevador`) quanto listas dinâmicas (`ArrayList` para clientes, OS, etc.).
 -   **Persistência de Dados**: Todas as informações são salvas e recuperadas de arquivos `.json` utilizando a biblioteca **Gson**, com tratamento seguro de recursos.
--   **Interface Gráfica (Extra)**: A interface gráfica foi desenvolvida com **Java Swing**, cumprindo o requisito extra da disciplina[cite: 53].
+-   **Interface Gráfica (Extra)**: A interface gráfica foi desenvolvida com **Java Swing**, cumprindo o requisito extra da disciplina.
 -   **Testes e Conceitos Avançados**: A classe `RespondendoQuestoes.java` demonstra a aplicação de `Iterator`, `Comparator`, `Collections.sort()` e `binarySearch`, conforme solicitado.
 
 ## 📂 Estrutura do Projeto
