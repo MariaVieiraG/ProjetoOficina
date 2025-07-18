@@ -5,10 +5,7 @@ Sistema de Gerenciamento de Oficina Mecânica
 ![Maven](https://img.shields.io/badge/Build-Maven-red)
 ![Database](https://img.shields.io/badge/Database-JSON-yellow)
 
-Sobre o Projeto
 
-Este projeto é um sistema de desktop para o gerenciamento completo de uma oficina mecânica. Desenvolvido em **Java** com a interface gráfica construída em **Swing**, o sistema oferece uma solução robusta para o controle de clientes, veículos, agendamentos, ordens de serviço, estoque de peças e finanças.
-A aplicação é estruturada em três perfis de usuário (Gerente, Atendente e Mecânico), cada um com permissões e funcionalidades específicas para otimizar o fluxo de trabalho da oficina.
 
 ## ✨ Funcionalidades Principais
 
