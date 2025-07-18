@@ -16,6 +16,7 @@
 -   **Extratos e Relatórios**: Emissão de extratos detalhados por Ordem de Serviço, relatórios diários/mensais de vendas e balanço financeiro.
 -   **Controle de Acesso**: Autenticação obrigatória de funcionário para iniciar o sistema, com acesso a funcionalidades restritas de acordo com o cargo.
 -   **Gestão de Elevadores**: O sistema gerencia 3 elevadores de forma estática, que podem ser associados aos agendamentos.
+-   **Sistema de Ponto**: O funcionario bate o ponto de entrada e saida.
 
 ## ✔️ Requisitos e Critérios Atendidos
 
